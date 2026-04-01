@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Sarbai6Laba12/1.0.0": {
+        "runtime": {
+          "Sarbai6Laba12.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sarbai6Laba12/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

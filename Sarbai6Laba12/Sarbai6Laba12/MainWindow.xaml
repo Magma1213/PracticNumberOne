@@ -1,0 +1,40 @@
+﻿<Window x:Class="Sarbai6Laba12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sarbai6Laba12"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="LightBlue">
+        <ScrollViewer>
+            <StackPanel Margin="20" Background="LightBlue">
+
+                <TextBlock Text="Лабораторная работа 6" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                <TextBlock Text="1. Лаба 2 (Проверка числа):" FontWeight="Bold"/>
+                <TextBox x:Name="InputLab2" Margin="0,5,0,5" Width="200" HorizontalAlignment="Left"/>
+                <Button Content="Проверить" Width="100" HorizontalAlignment="Left" Click="CheckNumber_Click"/>
+                <TextBlock x:Name="ResultLab2" Text="..." Foreground="Blue" Margin="0,5,0,20"/>
+
+                <TextBlock Text="2. Лаба 3 (Массив чисел через пробел):" FontWeight="Bold"/>
+                <TextBox x:Name="InputLab3" Margin="0,5,0,5" Width="300" HorizontalAlignment="Left"/>
+                <Button Content="Посчитать" Width="100" HorizontalAlignment="Left" Click="CountArray_Click"/>
+                <TextBlock x:Name="ResultLab3" Text="..." Foreground="Green" Margin="0,5,0,20"/>
+
+                <TextBlock Text="3. Лаба 4 (Транспонирование матрицы 3x3):" FontWeight="Bold"/>
+                <Button Content="Сгенерировать и перевернуть" Width="200" HorizontalAlignment="Left" Margin="0,5,0,5" Click="Matrix_Click"/>
+                <TextBlock x:Name="ResultLab4" Text="..." Foreground="Purple" Margin="0,5,0,20"/>
+
+                <TextBlock Text="4. Лаба 5 (Стоимость разговора):" FontWeight="Bold"/>
+                <TextBlock Text="Минуты:"/>
+                <TextBox x:Name="InputMins" Width="100" HorizontalAlignment="Left" Margin="0,5,0,5"/>
+                <TextBlock Text="Цена за 1 мин:"/>
+                <TextBox x:Name="InputCost" Width="100" HorizontalAlignment="Left" Margin="0,5,0,5"/>
+                <Button Content="Рассчитать" Width="100" HorizontalAlignment="Left" Click="CalcCost_Click"/>
+                <TextBlock x:Name="ResultLab5" Text="..." Foreground="Red" Margin="0,5,0,20"/>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
