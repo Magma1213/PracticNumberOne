@@ -1,0 +1,47 @@
+﻿<Window x:Class="Laba9Sarbai.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+Title="Сортировка массивов" Height="500" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock Text="Количество элементов массива:"/>
+            <TextBox x:Name="tbArraySize" Text="20" Margin="0,5,0,10"/>
+
+            <UniformGrid Columns="2" Margin="0,0,0,10">
+                <Button x:Name="btnGenerate" Content="Сгенерировать" Click="btnGenerate_Click" Margin="0,0,5,0"/>
+                <Button x:Name="btnLoadFile" Content="Массив из файла" Click="btnLoadFile_Click" Margin="5,0,0,0"/>
+            </UniformGrid>
+
+            <GroupBox Header="Методы сортировки" Margin="0,0,0,10">
+                <StackPanel>
+                    <RadioButton x:Name="rbSelection" Content="Метод выбора" IsChecked="True"/>
+                    <RadioButton x:Name="rbRadix" Content="Поразрядная сортировка"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Результат сортировки" Margin="0,0,0,10">
+                <StackPanel>
+                    <TextBlock x:Name="txtComparisons" Text="Количество сравнений: 0"/>
+                    <TextBlock x:Name="txtPermutations" Text="Количество перестановок: 0"/>
+                    <TextBlock x:Name="txtTime" Text="Время сортировки: 0"/>
+                </StackPanel>
+            </GroupBox>
+
+            <UniformGrid Columns="2" Margin="0,0,0,10">
+                <Button x:Name="btnSort" Content="Начать сортировку" Click="btnSort_Click" Margin="0,0,5,0" Background="SeaGreen" Foreground="White"/>
+                <Button x:Name="btnClear" Content="Очистить" Click="btnClear_Click" Margin="5,0,0,0" Background="Tomato" Foreground="White"/>
+            </UniformGrid>
+
+            <Button x:Name="btnSaveFile" Content="Сохранить в файл" Click="btnSaveFile_Click" Margin="0,0,0,10" Background="Blue" Foreground="White"/>
+        </StackPanel>
+
+        <RichTextBox x:Name="rtbOutput" Grid.Column="1" Margin="10" IsReadOnly="True" VerticalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>
